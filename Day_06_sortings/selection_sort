@@ -1,0 +1,57 @@
+<!-- Selection sort is a simple sorting algorithm frequently discussed in coding interviews, especially when testing candidates' understanding of sorting algorithms. Here’s a comprehensive list of potential interview questions about selection sort, along with detailed answers to help you prepare.
+
+1. What is Selection Sort?
+Answer: Selection Sort is a simple comparison-based sorting algorithm that divides the input list into two parts: a sorted part and an unsorted part. It repeatedly selects the smallest (or largest) element from the unsorted portion and moves it to the end of the sorted portion. This process is repeated until the entire list is sorted.
+2. How does Selection Sort work?
+Answer: The algorithm works by:
+Iterating through the array.
+In each iteration, finding the minimum element from the unsorted part.
+Swapping it with the first element of the unsorted part.
+Repeating the process for the remaining unsorted portion of the array until it’s completely sorted.
+Steps for an array [64, 25, 12, 22, 11]:
+
+Find the minimum element (11) and swap it with the first element.
+Find the minimum of the remaining elements (12) and swap it with the second element.
+Repeat this until the array is fully sorted.
+3. What is the time complexity of Selection Sort?
+Answer:
+Best-case time complexity: O(n²)
+Average-case time complexity: O(n²)
+Worst-case time complexity: O(n²) The reason for this is that regardless of whether the array is sorted or not, the algorithm always performs the same number of comparisons. For each element, the algorithm looks for the smallest element in the remaining unsorted array, leading to quadratic complexity.
+4. What is the space complexity of Selection Sort?
+Answer: The space complexity of Selection Sort is O(1), meaning it is an in-place sorting algorithm. It doesn’t require extra space proportional to the input size, as it only swaps elements within the array itself.
+5. Is Selection Sort a stable sorting algorithm?
+Answer: No, Selection Sort is not stable. Stability in sorting algorithms means that two equal elements retain their relative positions in the sorted array. In Selection Sort, even though two equal elements could exist, swapping elements may change their relative order.
+6. What are the advantages and disadvantages of Selection Sort?
+Advantages:
+Simple to understand and implement.
+Performs well on small datasets.
+In-place sorting, meaning it uses a constant amount of extra space.
+Disadvantages:
+Time complexity is O(n²), making it inefficient for large datasets.
+Not a stable sort.
+Even if the array is already sorted, it performs the same number of comparisons.
+7. Can Selection Sort be used for linked lists?
+Answer: While technically possible, Selection Sort is inefficient for linked lists because finding the minimum element requires traversing the list each time, which takes O(n) time. This increases the overall complexity to O(n³) for a linked list. Algorithms like Merge Sort or Quick Sort (modified for linked lists) are more appropriate.
+8. What is the difference between Selection Sort and Bubble Sort?
+Answer:
+Selection Sort: Selects the smallest element and swaps it with the first unsorted element in each pass.
+Bubble Sort: Compares adjacent elements and swaps them if they are in the wrong order, effectively “bubbling” the largest unsorted element to its correct position in each pass.
+Time Complexity: Both have O(n²) time complexity, but Selection Sort generally performs fewer swaps.
+9. How many comparisons and swaps does Selection Sort perform?
+Answer:
+Comparisons: In each iteration, it compares every unsorted element to find the minimum. This leads to approximately 
+𝑛
+(
+𝑛
+−
+1
+)
+2
+2
+n(n−1)
+​
+  comparisons in total.
+Swaps: Selection Sort performs exactly n - 1 swaps, as each iteration only swaps once (the minimum element found with the first unsorted element).
+10. Why is Selection Sort called an “in-place” algorithm?
+Answer: Selection Sort is called in-place because it requires only a constant amount of additional memory space (O(1)) -->
